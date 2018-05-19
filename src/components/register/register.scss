@@ -1,0 +1,141 @@
+/*
+* @Author: lle_wang
+* @Date:   2018-05-17 17:03:28
+* @Last Modified by:   lle_wang
+* @Last Modified time: 2018-05-19 15:56:58
+*/
+@font-face {
+    font-family: "icon-register";
+    src: url('../../fonts/login-register/iconfont.eot');
+    /* IE9*/
+    src: url('../../fonts/login-register/iconfont.eot') format('embedded-opentype'), /* IE6-IE8 */
+    url('../../fonts/login-register/iconfont.woff') format('woff'),
+    url('../../fonts/login-register/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('../../fonts/login-register/iconfont.svg') format('svg');
+    /* iOS 4.1- */
+}
+
+.icon-tel3,
+.icon-mima,
+.icon-user {
+    font-family: "icon-register" !important;
+    font-size: 40px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@import 'compass/_css3',
+'compass/_utilities';
+%width {
+    width: 100%;
+}
+
+%height {
+    height: 100vh;
+}
+
+%height-a {
+    height: auto;
+}
+
+%width-height {
+    @extend %width;
+    @extend %height;
+}
+
+%width-height-a {
+    @extend %width;
+    @extend %height-a;
+}
+
+$form-group-h: 70px;
+$form-group-h-sm: 50px;
+$common-fz: 40px;
+$common-fz-sm: 35px;
+$common-fz-lg: 70px;
+$border-color: #2b2b2b;
+$ft-color-red: #ff3b3b;
+.register-page {
+    @include display-flex;
+    @include flex-wrap(wrap);
+    @include align-content(center);
+    @extend %width-height;
+    background-image: url('../../images/appbeijing.jpg');
+    background-size: 100% auto;
+    @at-root .register-title {
+        @extend %width;
+        font-size: $common-fz-lg;
+        margin-top: 0;
+        margin-bottom: 50px;
+        text-align: center;
+        color: $ft-color-red;
+        font-family: Arial, Helvetica, 'sans-serif';
+    }
+    @at-root .form-register {
+        @extend %width-height-a;
+        @at-root .form-group-register {
+            @include display-flex;
+            @include justify-content(center);
+            @extend %width;
+            position: relative;
+            margin-bottom: 20px;
+            height: $form-group-h;
+            font-size: $common-fz;
+            .item-label {
+                @include inline-block;
+                width: 20%;
+                height: $form-group-h;
+                line-height: $form-group-h;
+                color: #fff;
+            }
+            .ipt {
+                width: 50%;
+                outline: none;
+                border: 1px solid $border-color;
+                text-indent: 60px;
+            }
+            .icons {
+                position: absolute;
+                left: 36%;
+                top: 15px;
+                color: #c3c3c3;
+            }
+            .icon-tel3 {
+				position: absolute;
+                font-size: 50px;
+                left: 35.6%;
+                top: 13px;
+            }
+            #ipt-login,
+            #ipt-cancel {
+                width: 20%;
+                height: 80px;
+                border: none;
+                background: $ft-color-red;
+                color: #fff;
+            }
+            #ipt-login {
+                margin-right: 10px;
+            }
+            #ipt-cancel {
+                margin-left: 10px;
+                background: #222837;
+            }
+        }
+        @at-root .buttons{
+        	margin-top: 50px;
+        }
+    }
+}
+.wrong-tips {
+    color: #fffc9a;
+    display: none;
+    .txt {
+        width: 70%;
+        text-indent: 20%;
+    }
+}
+.show {
+    @include display-flex;
+}

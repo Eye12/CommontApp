@@ -1,0 +1,130 @@
+/*
+* @Author: lle_wang
+* @Date:   2018-05-13 11:14:45
+* @Last Modified by:   lle_wang
+* @Last Modified time: 2018-05-16 14:27:36
+*/
+@font-face {font-family: "arrow-down";
+  src: url('../../fonts/arrow-down/iconfont.eot'); /* IE9*/
+  src: url('../../fonts/arrow-down/iconfont.eot') format('embedded-opentype'), /* IE6-IE8 */
+  url('../../fonts/arrow-down/iconfont.woff') format('woff'),
+  url('../../fonts/arrow-down/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../../fonts/arrow-down/iconfont.svg') format('svg'); /* iOS 4.1- */
+}
+
+.icon-jiantou4 {
+  font-family:"arrow-down" !important;
+  font-size:40px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+	&::before {
+		content: "\e65a";
+	}
+}
+
+
+@import 'compass/_css3', 'compass/_typography';
+$color: #f4f4f4;
+span {
+	@include inline-block;
+}
+.data-list-group,
+.data-list-group .line-cut,
+.data-list-group .title,
+.data-list-group .d-list,
+.data-list-group .li-item,
+.data-list-group .li-item .left>img,
+.data-list-group .li-item .top,
+.data-list-group .li-item .d-bottom,
+.data-list-group .li-title,
+.data-list-group .stars-group,
+.data-list-group .more {
+	width: 100%;
+}
+
+.data-list-group {
+	margin-top: 20px;
+	height: auto;
+	span {
+		vertical-align: top;
+	}
+	.line-cut {
+		height: 10px;
+		background: $color;
+	}
+	.title {
+		@include box-sizing(border-box);
+		margin: 0;
+		border-bottom: 1px solid $color;
+		line-height: 100px;
+		font-size: 42px;
+		padding-left: 20px;
+		letter-spacing: 4px;
+		font-family: 'Open Sans', sans-serif;
+	}
+	@at-root .d-list {
+		@include no-bullets;
+		margin: 0;
+		padding: 0 0 20px;
+		.li-item {
+			height: 300px;
+			padding: 15px;
+			@include box-sizing(border-box);
+			border-bottom: 1px solid $color;
+			.left,
+			.right {
+				height: 270px;
+			}
+			.left {
+				width: 40%;
+				img {
+					height: 100%;
+				}
+			}
+			.right {
+				@include box-sizing(border-box);
+				width: 60%;
+				font-size: 42px;
+				padding-left: 20px;
+				position: relative;
+				font-family: 'Open Sans', sans-serif;
+				color: #383838;
+				.stars-group {
+					height: 60px;
+				}
+				.pConsumption {
+					margin-left: 20px;
+					font-size: 2rem;
+					line-height: 60px;
+				}
+				@at-root .d-bottom {
+					width: 100%;
+					position: absolute;
+					left: 20px;
+					bottom: 0;
+					font-size: 80%;
+					color: #797979;
+					.distance {
+						position: absolute;
+						right: 20px;
+					}
+				}
+			}
+		}
+	}
+	.more {
+		height: auto;
+		font-size: 40px;
+		text-align: center;
+		letter-spacing: 4px;
+		background-color: $color;
+		margin: 0;
+		line-height: 100px;
+	}
+}
+
+.test {
+	height: 2000px;
+	background: red;
+}

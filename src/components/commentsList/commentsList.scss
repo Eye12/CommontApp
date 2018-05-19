@@ -1,0 +1,107 @@
+/*
+* @Author: lle_wang
+* @Date:   2018-05-16 18:23:43
+* @Last Modified by:   lle_wang
+* @Last Modified time: 2018-05-17 20:23:25
+*/
+@import 'compass/_css3', 'compass/_typography';
+%width {
+	width: 100%;
+}
+%height {
+	height: 100%;
+}
+%height-a {
+	height: auto;
+}
+%width-height {
+	@extend %width;
+	@extend %height;
+}
+%width-height-a {
+	@extend %width;
+	@extend %height-a;
+}
+%inline-block {
+	@include inline-block;
+}
+.title {
+    @include box-sizing(border-box);
+    padding: 30px 30px;
+    font-size: 44px;
+    margin: 0;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.comment-list {
+    @include box-sizing(border-box);
+    @include no-bullets;
+    padding-left: 30px;
+    @at-root .comments-item {
+        @extend %width;
+        height: 330px;
+        border-bottom: 1px solid rgba(0, 0, 0, .1);
+        margin-bottom: 15px;
+        .head-portrait {
+            width: 10%;
+            height: inherit;
+            img {
+                width: 100%;
+                height: auto;
+                @include border-radius(100%);
+            }
+        }
+        @at-root .comment-content {
+            @include box-sizing(border-box);
+            width: 90%;
+            height: inherit;
+            padding: 0 30px;
+            .user-info-group,
+            .name-time {
+                @extend %width-height-a;
+                font-size: 28px;
+            }
+            .name-time {
+                @include display-flex;
+                @include justify-content(space-between);
+            }
+            .user-stars {
+                height: 60px;
+                line-height: 60px;
+                .stars {
+                    margin-left: 10px;
+                    margin-top: -3px;
+                }
+                .icon-cc-star,
+                .icon-cc-star-half,
+                .icon-star {
+                    font-size: 30px;
+                }
+            }
+            .describe {
+                @extend %width;
+                white-space: nowrap;
+                height: 45px;
+                font-size: 32px;
+                line-height: 45px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -ms-text-overflow: ellipsis;
+                -moz-text-overflow: ellipsis;
+                -webkit-text-overflow: ellipsis;
+            }
+            .img-group {
+                margin-top: 15px;
+                @extend %width;
+                height: 160px;
+                overflow: hidden;
+                img {
+                    width: 250px;
+                    height: auto;
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}

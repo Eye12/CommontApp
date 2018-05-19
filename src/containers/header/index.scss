@@ -1,0 +1,95 @@
+/*
+* @Author: lle_wang
+* @Date:   2018-05-11 15:36:32
+* @Last Modified by:   lle_wang
+* @Last Modified time: 2018-05-18 21:19:11
+*/
+@font-face {
+    font-family: 'icon-arrow';
+    src: url('../../fonts/arrow/iconfont.eot') format('embedded-opentype'), /* IE6-IE8 */
+    url('../../fonts/arrow/iconfont.woff') format('woff'),
+    url('../../fonts/arrow/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('../../fonts/arrow/iconfont.svg') format('svg');
+    /* iOS 4.1- */
+}
+
+.icon-arrow {
+    font-family: "icon-arrow" !important;
+    font-size: 30px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    &::before {
+        content: "\e612";
+    }
+}
+
+@import 'compass/_css3', 'compass/_typography';
+.header {
+    width: 100%;
+    height: 150px;
+    background: #ff1111;
+    @include box-sizing(border-box);
+    @include display-flex();
+    @include justify-content(space-between);
+    @include align-items(center);
+    padding: 30px;
+    font-size: 2.5rem;
+    .search-group,
+    .ipt-search {
+        height: 70px;
+        border: none;
+        background-color: #fff;
+        @include border-radius(50px);
+    }
+    .search-group {
+        width: 60%;
+        position: relative;
+    }
+    .ipt-search {
+        width: 100%;
+        outline: none;
+        text-indent: 70px;
+        color: #4c4c4c;
+        &:-moz-placeholder {  /* Mozilla Firefox 4 to 18 */
+            color: #b0b0b0;
+        }
+        &::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color: #b0b0b0;
+        }
+        &:-ms-input-placeholder {
+            color: #b0b0b0;
+        }
+        &::-webkit-input-placeholder {
+            color: #b0b0b0;
+        }
+    }
+    .icon-search {
+        @include inline-block;
+        width: 32px;
+        height: 32px;
+        background-image: url('../../images/search.png');
+        position: absolute;
+        top: (70px - 32px)/2;
+        left: 20px;
+    }
+    .city,
+    .user {
+        color: #fff;
+    }
+    a {
+        @include unstyled-link;
+    }
+    #user-link {
+        width: 19.5%;
+    }
+    .user {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
+    }
+    .user {
+        width: 100%;
+    }
+}

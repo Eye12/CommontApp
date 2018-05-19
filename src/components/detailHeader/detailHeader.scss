@@ -1,0 +1,55 @@
+/*
+* @Author: lle_wang
+* @Date:   2018-05-16 10:33:39
+* @Last Modified by:   lle_wang
+* @Last Modified time: 2018-05-16 10:50:11
+*/
+@import 'compass/_css3';
+@font-face {font-family: "header-icons";
+  src: url('../../fonts/detail-header/iconfont.eot'); /* IE9*/
+  src: url('../../fonts/detail-header/iconfont.eot') format('embedded-opentype'), /* IE6-IE8 */
+  url('../../fonts/detail-header/iconfont.woff') format('woff'),
+  url('../../fonts/detail-header/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../../fonts/detail-header/iconfont.svg') format('svg'); /* iOS 4.1- */
+}
+
+$bg-color: #ff1111;
+$font-color: #ffffff;
+$height: 150px;
+
+.icon-more,
+.icon-xingxing1,
+.icon-zhuanfa,
+.icon-jiantou {
+  font-family:"header-icons" !important;
+  font-size:60px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $font-color;
+  margin-right: 20px;
+}
+
+.icon-more:before { content: "\e637"; }
+
+.icon-xingxing1:before { content: "\e641"; }
+
+.icon-zhuanfa:before { content: "\e642"; }
+
+.icon-jiantou:before { content: "\e64a"; }
+
+.detail-header {
+	width: 100%;
+	height: $height;
+	background-color: $bg-color;
+	@include display-flex;
+	@include justify-content(space-between);
+	@include box-sizing(border-box);
+	padding: 0 20px;
+	.left,
+	.right {
+		@include inline-block;
+		height: inherit;
+		line-height: $height;
+	}
+}

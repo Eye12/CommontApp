@@ -1,0 +1,31 @@
+/*
+* @Author: lle_wang
+* @Date:   2018-05-16 11:29:17
+* @Last Modified by:   lle_wang
+* @Last Modified time: 2018-05-16 11:30:49
+*/
+@font-face {font-family: "iconfont";
+  src: url('../../fonts/star/iconfont.eot'); /* IE9*/
+  src: url('../../fonts/star/iconfont.eot') format('embedded-opentype'), /* IE6-IE8 */
+  url('../../fonts/star/iconfont.woff') format('woff'),
+  url('../../fonts/star/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../../fonts/star/iconfont.svg') format('svg'); /* iOS 4.1- */
+}
+
+.icon-cc-star,
+.icon-cc-star-half,
+.icon-star
+ {
+  font-family:"iconfont" !important;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 38px;
+  color: red;
+}
+
+.icon-cc-star:before { content: "\e69d"; }
+
+.icon-cc-star-half:before { content: "\e6b6"; }
+
+.icon-star:before { content: "\e671"; }

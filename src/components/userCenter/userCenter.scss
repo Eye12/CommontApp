@@ -1,0 +1,168 @@
+/*
+* @Author: lle_wang
+* @Date:   2018-05-17 20:37:37
+* @Last Modified by:   lle_wang
+* @Last Modified time: 2018-05-18 21:44:44
+*/
+
+@font-face {font-family: "user-iconfonts";
+  src: url('../../fonts/user-center/iconfont.eot'); /* IE9*/
+  src: url('../../fonts/user-center/iconfont.eot') format('embedded-opentype'), /* IE6-IE8 */
+  url('../../fonts/user-center/iconfont.woff') format('woff'),
+  url('../../fonts/user-center/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../../fonts/user-center/iconfont.svg') format('svg'); /* iOS 4.1- */
+}
+
+.icon-shezhi,
+.icon-youxiang,
+.icon-kefuzhongxin,
+.icon-xingxing,
+.icon-zuji,
+.icon-pingjia,
+.icon-fanhuishouye {
+  font-family:"user-iconfonts" !important;
+  font-size: 50px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-kefuzhongxin:before { content: "\e600"; }
+
+.icon-xingxing:before { content: "\e642"; }
+
+.icon-youxiang:before { content: "\e623"; }
+
+.icon-zuji:before { content: "\e6b6"; }
+
+.icon-pingjia:before { content: "\e652"; }
+
+.icon-shezhi:before { content: "\e605"; }
+
+.icon-fanhuishouye:before { content: "\e64b"; }
+
+@import 'compass/_css3', 'compass/_utilities';
+%width {
+	width: 100%;
+}
+%height {
+	height: 100vh;
+}
+%height-a {
+	height: auto;
+}
+%width-height {
+	@extend %width;
+	@extend %height;
+}
+%width-height-a {
+	@extend %width;
+	@extend %height-a;
+}
+$common-color: #ff1111;
+.user-center {
+	@extend %width-height;
+	background: $common-color;
+	background-image: url('../../images/user-bg.png');
+	background-repeat: no-repeat;
+	background-position: 50% 14%;
+	@at-root .u-top-head {
+		@extend %width;
+		height: 120px;
+		line-height: 120px;
+		.left {
+			@include float(left);
+		}
+		.right {
+			@include float(right);
+		}
+		&::after {
+			@include legacy-pie-clearfix;
+		}
+		.icon-shezhi,
+		.icon-youxiang {
+			color: #fff;
+		}
+		.icon-shezhi {
+			margin-left: 50px;
+		}
+		.icon-youxiang {
+			margin-right: 50px;
+		}
+	}
+	@at-root .u-head-portrait {
+		@extend %width;
+		height: 140px;
+		margin-top: -30px;
+		text-align: center;
+		.portrait {
+			width: 140px;
+			height: 140px;
+			@include border-radius(100%);
+		}
+	}
+	@at-root .u-user-name {
+		@extend %width-height-a;
+		text-align: center;
+		font-size: 34px;
+		line-height: 70px;
+	}
+	@at-root .u-groups {
+		@include display-flex;
+		@include justify-content(space-around);
+		@include align-items(center);
+		@extend %width;
+		height: 200px;
+		border-bottom: 1px solid rgba(0,0,0,.1);
+		.group-item {
+			width: 25%;
+			text-align: center;
+			.txt {
+				width: 100%;
+				font-size: 33px;
+				margin-top: 5px;
+			}
+			.icon-xingxing,
+			.icon-zuji,
+			.icon-pingjia {
+				color: $common-color;
+				font-size: 65px;
+			}
+			.icon-zuji {
+				font-size: 75px;
+			}
+		}
+	}
+	@at-root .u-server {
+		@include box-sizing(border-box);
+		padding: 0 30px;
+		@extend %width-height-a;
+		p {
+			margin: 0;
+		}
+		.u-title {
+			@extend %width-height-a;
+			font-size: 40px;
+			margin: 30px 0 40px;
+		}
+		.server-item {
+			width: 17%;
+			text-align: center;
+			margin-right: 50px;
+			a {
+				text-decoration: none;
+				color: #000;
+			}
+			.icon-kefuzhongxin,
+			.icon-fanhuishouye {
+				font-size: 65px;
+				color: $common-color;
+			}
+			.txt {
+				@extend %width;
+				font-size: 33px;
+				margin-top: 10px;
+			}
+		}
+	}
+}

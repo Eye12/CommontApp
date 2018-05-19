@@ -1,0 +1,147 @@
+/*
+* @Author: lle_wang
+* @Date:   2018-05-17 15:46:05
+* @Last Modified by:   lle_wang
+* @Last Modified time: 2018-05-18 17:47:58
+*/
+@import 'compass/_css3', 'compass/_utilities';
+@font-face {font-family: "icon-login";
+  src: url('../../fonts/login-register/iconfont.eot'); /* IE9*/
+  src: url('../../fonts/login-register/iconfont.eot') format('embedded-opentype'), /* IE6-IE8 */
+  url('../../fonts/login-register/iconfont.woff') format('woff'),
+  url('../../fonts/login-register/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../../fonts/login-register/iconfont.svg') format('svg'); /* iOS 4.1- */
+}
+
+.icon-tel3,
+.icon-mima,
+.icon-user {
+  font-family:"icon-login" !important;
+  font-size:40px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-tel3:before { content: "\e648"; }
+
+.icon-mima:before { content: "\e64c"; }
+
+.icon-user:before { content: "\e61c"; }
+%width {
+	width: 100%;
+}
+%height {
+	height: 100vh;
+}
+%height-a {
+	height: auto;
+}
+%width-height {
+	@extend %width;
+	@extend %height;
+}
+%width-height-a {
+	@extend %width;
+	@extend %height-a;
+}
+$form-group-h: 70px;
+$form-group-h-sm: 50px;
+$common-fz: 40px;
+$common-fz-sm: 35px;
+$common-fz-lg: 70px;
+$border-color: #2b2b2b;
+$ft-color-red: #ff3b3b;
+.login-page {
+	@include display-flex;
+	@include flex-wrap(wrap);
+	@include align-content(center);
+	@extend %width-height;
+	background-image: url('../../images/appbeijing.jpg');
+	background-size: 100% auto;
+	@at-root .login-title {
+		@extend %width;
+		font-size: $common-fz-lg;
+		margin-top: 0;
+		margin-bottom: 50px;
+		text-align: center;
+		color: $ft-color-red;
+		font-family: Arial, Helvetica, 'sans-serif';
+	}
+	@at-root .form-login {
+		@extend %width-height-a;
+		@at-root .form-group-login {
+			@include display-flex;
+			@include justify-content(center);
+			@extend %width;
+			position: relative;
+			position: relative;
+			margin-bottom: 20px;
+			height: $form-group-h;
+			font-size: $common-fz;
+			.item-label {
+				@include inline-block;
+				width: 20%;
+				height: $form-group-h;
+				line-height: $form-group-h;
+				color: #fff;
+			}
+			.ipt {
+				width: 50%;
+				outline: none;
+				border: 1px solid $border-color;
+				text-indent: 60px;
+			}
+			.icons {
+				position: absolute;
+				left: 36%;
+				top: 15px;
+				color: #c3c3c3;
+			}
+			.span-group {
+				width: 70%;
+				font-size: $common-fz-sm;
+				a {
+					color: $ft-color-red;
+				}
+				#forget,
+				#register {
+					@include float(right);
+					color: $ft-color-red;
+				}
+				#forget {
+					margin-right: 20px;
+				}
+				&::after {
+					@include legacy-pie-clearfix;
+				}
+			}
+			#ipt-login,
+			#ipt-cancel {
+				width: 20%;
+				height: 80px;
+				border: none;
+				background: $ft-color-red;
+				color: #fff;
+			}
+			#ipt-login {
+				margin-right: 10px;
+			}
+			#ipt-cancel {
+				margin-left: 10px;
+				background: #222837;
+			}
+		}
+	}
+}
+.wrong-tips {
+	color: #fffc9a;
+	display: none;
+	.txt {
+		width: 70%;
+		text-indent: 20%;
+	}
+}
+.show {
+	@include display-flex;
+}

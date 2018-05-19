@@ -1,0 +1,34 @@
+/*
+* @Author: lle_wang
+* @Date:   2018-05-14 10:07:37
+* @Last Modified by:   lle_wang
+* @Last Modified time: 2018-05-19 15:55:52
+*/
+@import 'compass/_css3', 'compass/_typography';
+.citys {
+	width: 100%;
+	height: auto;
+	@include box-sizing(border-box);
+	padding: 1%;
+	.title {
+		@include box-sizing(border-box);
+		font-size: 2.5rem;
+		letter-spacing: 2px;
+		margin: 0;
+		padding-left: 1%;
+		margin-bottom: 1%;
+	}
+	.city-list {
+		@include no-bullets;
+		@include inline-block-list;
+		.item {
+			@include box-sizing(border-box);
+			line-height: 80px;
+			width: 23%;
+			margin: 1% 1%;
+			text-align: center;
+			font-size: 2.2rem;
+			border: 1px solid rgba(0,0,0,.1);
+		}
+	}
+}

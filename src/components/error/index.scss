@@ -1,0 +1,16 @@
+/*
+* @Author: lle_wang
+* @Date:   2018-05-13 22:07:21
+* @Last Modified by:   lle_wang
+* @Last Modified time: 2018-05-19 15:56:25
+*/
+@import 'compass/_css3';
+
+.error-page {
+	width: 100%;
+	height: 600px;
+	@include display-flex;
+	@include justify-content(center);
+	@include align-items(center);
+	font-size: 3.5rem;
+}

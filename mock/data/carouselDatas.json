@@ -1,0 +1,46 @@
+{
+	"pageOne": [{
+		"name": "美食",
+		"img": "food"
+	}, {
+		"name": "电影",
+		"img": "movie"
+	}, {
+		"name": "酒店",
+		"img": "hotel"
+	}, {
+		"name": "休闲",
+		"img": "arder"
+	}, {
+		"name": "外卖",
+		"img": "takeOut-food"
+	}, {
+		"name": "购物",
+		"img": "store"
+	}, {
+		"name": "周边游",
+		"img": "mountain"
+	}, {
+		"name": "游乐园",
+		"img": "park"
+	}, {
+		"name": "酒吧",
+		"img": "bar"
+	}, {
+		"name": "美发",
+		"img": "scissors"
+	}],
+	"pageTwo": [{
+		"name": "健身",
+		"img": "body-building"
+	}, {
+		"name": "美甲",
+		"img": "nail-enamel"
+	}, {
+		"name": "景点",
+		"img": "feature-spot"
+	}, {
+		"name": "购物",
+		"img": "store"
+	}]
+}
